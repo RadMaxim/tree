@@ -398,6 +398,6 @@ let data = `Аарон
 Джеймс
 Джема
 Джемма`;
-let arr = data.split("\n")
+let arr = data.split("\n").map((elem)=>({value:elem,data:new Date().getTime()}))
 
 export {arr}

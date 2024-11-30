@@ -25,24 +25,53 @@ body{
         text-indent: 10px;
     }
 }
-div{
-    @include posElem();
+.mainList{
     overflow-y: scroll;
-    #words{
-        height: 100%;
-       
-        flex-direction: column;
+    height: 700px;
+    width: 500px;
+    scroll-snap-type: y mandatory;
+    // scrollbar-width: 50px;
+    // scrollbar-color:  rgb(215, 215, 255) black;
+    
+    // &::-webkit-scrollbar-thumb{
+    //     background-color: rgb(255, 255, 255);
+    //     width: 10px;
+
+    // }
+    // &::-webkit-scrollbar-track{
+    //     background-color: rgb(255, 0, 0);
+
+    //     width: 10px;
         
-       
-        height: 700px;
-        width: 500px;
+    // }
+    &::-webkit-scrollbar{
+        width: 15px;
+        background-color: rgb(255, 255, 255)
+    }
+    &::-webkit-scrollbar-track{
+        background-color: rgb(255, 255, 255)
+    }
+    &::-webkit-scrollbar-thumb{
+        height: 100px;
+        background-color: rgb(215, 215, 255);
+    }
+    #words{
+        
+        @include posElem();
+        flex-direction: column;
+        row-gap: 40px;
+        width: 100%;
         border-radius: 10px;
         background-color: rgba(255, 255, 255, 0.432);
     li{
+        @include posElem();
+        
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
         width: 95%;
-        height: 100px;
-        background-color: rgb(131, 131, 131);
-        margin-top: 10px;
+        height: 200px;
+        background-color: rgba(255, 255, 255, 0.405);
+      
        
     }
     }
