@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(215, 215, 255);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  padding: 10px;
+}
+body input {
+  width: 40vw;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: white;
+  text-indent: 10px;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: scroll;
+}
+div #words {
+  height: 100%;
+  flex-direction: column;
+  height: 700px;
+  width: 500px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.432);
+}
+div #words li {
+  width: 95%;
+  height: 100px;
+  background-color: rgb(131, 131, 131);
+  margin-top: 10px;
+}/*# sourceMappingURL=index.css.map */
