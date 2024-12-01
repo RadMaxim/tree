@@ -398,7 +398,39 @@ let data = `Аарон
 Джеймс
 Джема
 Джемма`;
-
+class TrieNode {
+    constructor() {
+      this.children = {};
+      this.isWord = false;
+      this.info = null
+    }
+  }
+//создаем полиморфное дерево
+  class Trie {
+    constructor() {// создаем пустой узел
+      this.root = new TrieNode();
+    }
+    insert(word, data) {// метод принимает слово
+      let node = this.root;
+      for (const char of word) { // перебираем каждую букву
+        if (!node.children[char]) { // если буквы нет в объекте
+          node.children[char] = new TrieNode(); // тогда присваеваем букву 
+          //в объект и добавляем ссылку
+        }
+        node = node.children[char];
+      }
+      node.info = data
+      node.isWord = true;// если слова закончилось тогда присваеваем флаг true
+    }
+    serialize(node = this.root, prefix = "") {
+      let result = [];
+      if (node.isWord) result.push(prefix);
+      for (const char in node.children) {
+        result = result.concat(this.serialize(node.children[char], prefix + char));
+      }
+      return result;
+    }
+  }
 let arrElem = data.split("\n").map((elem)=>({value:elem,data:new Date().getTime()}))
 let arr = []
 for (let index = 0; index < 10; index++) {
@@ -410,5 +442,6 @@ for (let index = 0; index < 10; index++) {
     arr = [...arr, ...newArr]
 }
 
-
-export {arr}
+const trie = new Trie();
+arr.forEach((elem)=>trie.insert(elem.value,elem))
+export {arr, trie}

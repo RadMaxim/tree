@@ -1,14 +1,16 @@
 
-import { drawElem, drawElemArray } from "./drawElem.js";
+import { drawElemArray } from "./drawElemFromArray.js";
+import { drawElem } from "./drawElemsFromTree.js";
 //создаем один узел со ссылкой на следующий элемент
 
  
   
 window.addEventListener("load",()=>{
-    drawElem("");
-    drawElemArray("");
     let searchWord = document.getElementById("searchWord")
     let searchWord1 = document.getElementById("searchWord1")
+    drawElem("");
+    drawElemArray("");
+   
 
     searchWord.addEventListener("input",()=>{
         
