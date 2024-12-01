@@ -7,12 +7,36 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <input  id="searchWord" type="text" placeholder="Enter any word">
-    <div class="mainList">
-        <ul id="words">
+    <div><h2>Префиксное дерево</h2>
+    <p>Время работы нахождение через префиксное дерево</p></div>
+    <div class="search_timers">
+        <div class="search_timer">
+            <label for="searchWord">Tree: </label>        
 
-        </ul>
+            <input  id="searchWord" type="text" placeholder="Enter any word">
+   <p id="timer1">0</p></div>
+        <div class="search_timer">
+            <label for="searchWord1">Array: </label>        
+            <input  id="searchWord1" type="text" placeholder="Enter any word">
+            <p id="timer2">0</p></div>
+    
     </div>
+   
+    <div class="lists">
+        <div class="mainList">
+            <ul id="words">
+    
+            </ul>
+           
+        </div>
+        <div class="mainList">
+            <ul id="words1">
+    
+            </ul>
+           
+        </div>
+    </div>
+    
     <script type="module" src="./index.js"></script>
 </body>
 </html>

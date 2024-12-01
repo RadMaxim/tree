@@ -398,6 +398,17 @@ let data = `Аарон
 Джеймс
 Джема
 Джемма`;
-let arr = data.split("\n").map((elem)=>({value:elem,data:new Date().getTime()}))
+
+let arrElem = data.split("\n").map((elem)=>({value:elem,data:new Date().getTime()}))
+let arr = []
+for (let index = 0; index < 10; index++) {
+    let newArr = []
+    for (let j = 0; j < arrElem.length; j++) {
+        newArr.push({value:arrElem[j].value+index,data:new Date().getTime() })
+        
+    }
+    arr = [...arr, ...newArr]
+}
+
 
 export {arr}

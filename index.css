@@ -14,13 +14,17 @@ body {
   padding: 10px;
 }
 body input {
-  width: 40vw;
+  width: 25vw;
   height: 40px;
   border: none;
   outline: none;
   border-radius: 10px;
   background-color: white;
   text-indent: 10px;
+}
+
+.lists {
+  display: flex;
 }
 
 .mainList {
@@ -40,7 +44,7 @@ body input {
   height: 100px;
   background-color: rgb(215, 215, 255);
 }
-.mainList #words {
+.mainList #words, .mainList #words1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,13 +54,28 @@ body input {
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.432);
 }
-.mainList #words li {
+.mainList #words li, .mainList #words1 li {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   scroll-snap-align: center;
   scroll-snap-stop: always;
   width: 95%;
   height: 200px;
   background-color: rgba(255, 255, 255, 0.405);
+}
+
+.search_timer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.search_timers {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  align-items: center;
 }/*# sourceMappingURL=index.css.map */
